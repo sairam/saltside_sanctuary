@@ -1,8 +1,9 @@
 FactoryGirl.define do
   factory :bird do
-    name "John"
-    family  "Doe"
-    continents  ["Doe"]
+    # TODO use Faker to get
+    name "Penguin"
+    family  "Pengniu"
+    continents  ["Antarctica"]
     added "2016-10-12"
     visible true
 
