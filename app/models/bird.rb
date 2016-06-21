@@ -9,7 +9,9 @@ class Bird
 
   validates_presence_of :name, :family
   validates :continents, length: { minimum: 1 }
-  validate :continent_data
+  # Testing for boolean is not required since mongoid takes care of conversion of strings
+  # validates :visible, inclusion: { in: [ true, false ] }
+  validate :date_added, :continent_data
 
   scope :visible, -> { where(visible: true) }
 
@@ -22,6 +24,12 @@ class Bird
   end
 
   private
+
+  def date_added
+    Date.parse(added)
+  rescue
+    errors.add(:continents, "is not a valid date")
+  end
   def continent_data
     if continents.class == Array
       continents.each do |x|

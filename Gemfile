@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 RAILS_VERSION = '4.2.6'
+# gem 'rails', RAILS_VERSION
 gem 'activesupport', RAILS_VERSION
 gem 'actionpack',    RAILS_VERSION
 gem 'railties',      RAILS_VERSION
@@ -9,12 +10,8 @@ gem 'bundler',       '>= 1.3.0', '< 2.0'
 # Database
 gem 'mongoid'
 
-# gem 'responders'
+# gem 'json-schema'
 
-gem 'json-schema'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
   gem 'pry'
@@ -23,8 +20,12 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  # gem 'rspec_expectation_count' # works only with ruby >= 2.2.4
   gem 'timecop'
+  gem 'factory_girl_rails'
+  gem 'mongoid-rspec', '3.0.0'
 end
 
 group :development do
