@@ -29,6 +29,17 @@ describe Bird do
         end
         expect(bird.save).to be_truthy
       end
+      it 'respects current time to get UTC date' do
+        Timecop.freeze(Time.now)
+        bird = Bird.new
+        expect(bird.added).to eq(Time.now.utc.to_s.split(' ')[0])
+        Timecop.return
+        future_date = 10.days.from_now
+        Timecop.freeze(future_date)
+        bird = Bird.new
+        expect(bird.added).to eq(Time.now.utc.to_s.split(' ')[0])
+        Timecop.return
+      end
     end
 
     context 'with invalid params' do
