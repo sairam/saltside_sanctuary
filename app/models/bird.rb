@@ -28,7 +28,7 @@ class Bird
   def date_added
     Date.parse(added)
   rescue
-    errors.add(:continents, "is not a valid date")
+    errors.add(:added, "is not a valid date")
   end
   def continent_data
     if continents.class == Array

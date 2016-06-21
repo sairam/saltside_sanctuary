@@ -2,11 +2,11 @@
 * Using Ruby 2.2.1
 * Tested on Mac OS X
 
-## how to run
+## how to start server (requires mongodb)
 rails s # -p $PORT
 
-## how to run tests
-rspec spec/
+## how to run tests (requires mongodb)
+* `rspec -f d spec/controllers spec/models`
 
 ## endpoints to hit
 
