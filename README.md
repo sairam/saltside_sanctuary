@@ -13,11 +13,11 @@ rails s # -p $PORT
 * `rspec -f d spec/controllers spec/models`
 
 ## Testing from CLI
-`curl -H "Content-Type: application/json" -X POST -d @db/samples/create_bird.json http://localhost:3000/api/birds.json`
+`curl -H "Content-Type: application/json" -X POST -d @db/samples/create_bird.json http://localhost:3000/birds.json`
 
 ## endpoints that can be hit
 
-* `GET http://localhost:3000/api/birds`
-* `POST http://localhost:3000/api/birds`
-* `GET http://localhost:3000/api/birds/57692020c5231b94f8d78b36`
-* `DELETE http://localhost:3000/api/birds/57692020c5231b94f8d78b36`
+* `GET http://localhost:3000/birds`
+* `POST http://localhost:3000/birds`
+* `GET http://localhost:3000/birds/57692020c5231b94f8d78b36`
+* `DELETE http://localhost:3000/birds/57692020c5231b94f8d78b36`

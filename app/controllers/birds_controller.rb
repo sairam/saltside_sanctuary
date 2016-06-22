@@ -1,4 +1,4 @@
-class Api::BirdsController < ApiController
+class BirdsController < ApiController
   def show
     bird = Bird.find(params[:id])
     render json: bird
@@ -11,7 +11,7 @@ class Api::BirdsController < ApiController
   def create
     bird = Bird.new(bird_params)
     if bird.save
-      headers['location'] = api_bird_path(bird.id)
+      headers['location'] = bird_path(bird.id)
       render json: bird, status: 201
     else
       render json: bird.errors.full_messages, status: 400

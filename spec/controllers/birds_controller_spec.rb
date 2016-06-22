@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::BirdsController do
+describe BirdsController do
   context 'POST create' do
     it 'with all params' do
       expect {
