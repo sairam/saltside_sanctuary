@@ -2,16 +2,20 @@
 * Tested on Ruby 2.2.4 and 2.2.1
 * Tested on Mac OS X
 
-## how to start server (requires mongodb)
+## Building
+* `gem install bundler`
+* bundle install
+
+## start server (requires mongodb)
 rails s # -p $PORT
 
-## how to run tests (requires mongodb)
+## Run tests (requires mongodb)
 * `rspec -f d spec/controllers spec/models`
 
 ## Testing from CLI
 `curl -H "Content-Type: application/json" -X POST -d @db/samples/create_bird.json http://localhost:3000/api/birds.json`
 
-## endpoints to hit
+## endpoints that can be hit
 
 * `GET http://localhost:3000/api/birds`
 * `POST http://localhost:3000/api/birds`
