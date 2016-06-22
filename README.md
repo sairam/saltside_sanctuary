@@ -7,7 +7,7 @@
 * bundle install
 
 ## start server (requires mongodb)
-rails s # -p $PORT
+* rails s # -p $PORT # runs on port 3000 by default
 
 ## Run tests (requires mongodb)
 * `rspec -f d spec/controllers spec/models`
